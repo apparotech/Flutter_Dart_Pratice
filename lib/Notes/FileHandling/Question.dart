@@ -1,24 +1,36 @@
 
 import 'dart:io';
 
-void main() async{
+class House {
+int id;
+String name;
+int price;
 
-  Directory directory = Directory('C:\\Users\\kuuma\\OneDrive\\Desktop');
 
-  if(!await directory.exists()) {
+House({
+  required this.id,
+  required this.name,
+  required this.price
+});
 
-    await directory.create();
-  }
 
-  for(int i =0; i<=5; i++) {
-    String fileName = 'file_$i.txt';
-    File file = File('${directory.path}/$fileName');
+void display() {
+  print('id: $id, name: $name,  price: $price');
+}
+}
 
-    await file.writeAsString('This is file number $i');
-    print('Created: $fileName');
-  }
+void main() {
 
-  print('All file created');
+final house = House(id: 1, name: "suraj", price: 20);
+final house2 = House(id:2 , name:" amit", price: 30);
+final house3 = House(id: 3, name: "aman", price: 40);
+
+List<House> list = [house, house2, house3];
+
+for(var house in list) {
+  house.display();
+}
+
 
 
 }
