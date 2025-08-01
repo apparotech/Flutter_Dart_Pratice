@@ -1,31 +1,21 @@
 
-class Animal {
-  int? id;
-  String? name;
-  String? Color;
+class Camera {
+
+
+ final int _id;
+ final String _brand;
+final String _color;
+final double _price;
+
+const Camera(  this._id, this._brand,  this._price,   this._color);
+
 
 }
 
-class Cat  extends Animal{
-  String?  sound;
 
-  void disply() {
-    print('id: $id, name: $name,  color: $Color, sound: $sound');
-  }
-
-}
 
 
 void main () {
- Cat cat = Cat();
- cat.name = "haapy";
- cat.id = 20;
- cat.Color = "yellow";
- cat.sound = "bark";
 
- List<Cat> c = [cat];
-  for(var ca in c) {
-    ca.disply();
-  }
 
 }
