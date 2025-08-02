@@ -5,6 +5,7 @@ import 'package:questions_pratice/Toturial_Pratice/HelperClass/LocalNotification
 import 'package:questions_pratice/Toturial_Pratice/Page/HomePage.dart';
 import 'package:questions_pratice/Toturial_Pratice/Page/NotificationPage.dart';
 import 'package:questions_pratice/Toturial_Pratice/Service/PushNotificationService.dart';
+import 'package:questions_pratice/Toturial_Pratice/WebSocket/WebSocket.dart';
 import 'package:questions_pratice/Toturial_Pratice/bottom_nav/bottom_nav.dart';
 
 
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  NotificationPage()
+      home:  WebSocket()
     );
   }
 }
